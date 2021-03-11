@@ -1,9 +1,13 @@
-num1, num2, num3 = int(input()), int(input()), int(input())
-counter = 0  # переменная счётчик
-if num1 % 2 == 0:
-    counter = counter + 1  # увеличиваем счётчик на 1
-if num2 % 2 == 0:
-    counter = counter + 1  # увеличиваем счётчик на 1
-if num3 % 2 == 0:
-    counter = counter + 1  # увеличиваем счётчик на 1
-print(counter)
+num = int(input())
+minn=0
+maxx=0
+while num !=0:
+    last = num%10
+    if last>maxx:
+        maxx,last=last,maxx
+
+        if minn>maxx:
+            maxx, minn=minn, maxx
+        num = num // 10
+print(f"Максимальная цифра равна {maxx}")
+print(f"Минимальная цифра равна {minn}")
